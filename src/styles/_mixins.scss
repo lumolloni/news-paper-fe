@@ -1,0 +1,19 @@
+// Shared SCSS breakpoints + a `respond-to` mixin. Import with `@use` and call
+// e.g. `@include respond-to('tablet') { … }`.
+@use 'sass:map';
+
+$breakpoints: (
+  'mobile': 600px,
+  'tablet': 900px,
+  'desktop': 1200px,
+);
+
+@mixin respond-to($name) {
+  @if map.has-key($breakpoints, $name) {
+    @media (max-width: map.get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint `#{$name}`. Available: #{map.keys($breakpoints)}.";
+  }
+}

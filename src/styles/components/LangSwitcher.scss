@@ -1,0 +1,27 @@
+.lang {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang__btn {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.6rem;
+  background: var(--bg-elevated);
+  color: var(--text-soft);
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+.lang__btn--active {
+  background: var(--accent);
+  color: #fff;
+}
+.lang__btn:not(.lang__btn--active):hover {
+  color: var(--text);
+}

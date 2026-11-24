@@ -1,0 +1,26 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--text-faint);
+  transition: border-color 0.2s ease;
+  min-width: 0;
+}
+.search:focus-within {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  width: 100%;
+  min-width: 0;
+}

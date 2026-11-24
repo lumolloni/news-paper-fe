@@ -1,0 +1,20 @@
+.sk {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.sk__img {
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+}
+.sk__line {
+  height: 14px;
+  border-radius: 4px;
+}
+.sk__line--sm {
+  width: 30%;
+  height: 10px;
+}
+.sk__line--md {
+  width: 70%;
+}

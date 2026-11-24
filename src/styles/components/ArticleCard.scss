@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card__media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-soft);
+}
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card:hover .card__media img {
+  transform: scale(1.04);
+}
+.card__flag {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 5px;
+}
+.card__cat {
+  display: inline-block;
+  // 24px line box = WCAG 2.2 minimum touch target, no visible size change.
+  line-height: 26px;
+  min-width: 24px;
+}
+.card__title {
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.card__title a {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease;
+}
+.card:hover .card__title a {
+  background-size: 100% 2px;
+}
+.card__excerpt {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+.card__author {
+  font-weight: 600;
+  color: var(--text-soft);
+}
+.card__author:hover {
+  color: var(--accent);
+}
+.card__sep {
+  opacity: 0.5;
+}
+
+/* Hero */
+.card--hero .card__media {
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+}
+.card--hero .card__title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 900;
+}
+.card--hero .card__excerpt {
+  font-size: 1.1rem;
+}
+
+/* Compact */
+.card--compact {
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.card--compact .card__media {
+  flex: 0 0 110px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+.card--compact .card__title {
+  font-size: 1rem;
+}
+.card--compact .card__body {
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Text only (no image) */
+.card--text {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+}
+.card--text .card__title {
+  font-size: 1.05rem;
+}

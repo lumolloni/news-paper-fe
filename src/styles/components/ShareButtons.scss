@@ -1,0 +1,35 @@
+.share {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.share__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.share__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.share__btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.share__btn--copy.ok {
+  color: #16a34a;
+  border-color: #16a34a;
+}
+
+.share__glyph::before {
+  content: attr(data-glyph);
+}

@@ -1,0 +1,30 @@
+.search-page {
+  padding-top: 2.5rem;
+}
+.search-page__head {
+  margin-bottom: 2rem;
+}
+.search-page__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  margin: 0.3rem 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2rem;
+}
+.empty {
+  text-align: center;
+  padding: 3rem 0;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
