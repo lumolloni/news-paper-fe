@@ -20,7 +20,7 @@ export const i18n = createI18n({
   fallbackWarn: false,
   messages: {},
   messageCompiler: (message) =>
-    typeof message === 'string' ? () => message : (message as () => string),
+    typeof message === 'string' ? () => message : (message as unknown as () => string),
 })
 
 /** Replace a locale's catalogue with the CMS-managed dictionary. */
